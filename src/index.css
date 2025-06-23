@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* // Add this custom style for button hover effect */
+.button-hover-effect {
+  @apply relative text-white overflow-hidden;
+}
+.button-hover-effect::before {
+  content: "";
+  color: white;
+  @apply absolute inset-0 transition-all duration-500 transform scale-x-0 origin-left;
+  background-color: #ff8c00; /* Very bright orange */
+  z-index: 0;
+}
+.button-hover-effect:hover::before {
+  @apply scale-x-100;
+}
+.button-hover-effect span {
+  @apply relative z-10;
+}
