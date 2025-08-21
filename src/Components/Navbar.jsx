@@ -7,7 +7,6 @@ const Navbar = () => {
   );
   const [menuOpen, setMenuOpen] = useState(false);
 
-
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
